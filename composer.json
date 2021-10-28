@@ -1,0 +1,20 @@
+{
+    "name": "user/cms",
+    "autoload": {
+        "psr-4": {
+            "User\\Cms\\": "src/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "device",
+            "email": "yakovenko182003@gmail.com"
+        }
+    ],
+    "require": {
+        "noahbuscher/macaw": "dev-master",
+        "twig/twig": "^3.0"
+
+    }
+}
