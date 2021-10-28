@@ -45,7 +45,7 @@ final class ModuleNode extends Node
             $nodes['parent'] = $parent;
         }
 
-        // embedded templates are set as attributes so that they are only visited once by the visitors
+        // embedded template are set as attributes so that they are only visited once by the visitors
         parent::__construct($nodes, [
             'index' => null,
             'embedded_templates' => $embeddedTemplates,
@@ -458,7 +458,7 @@ final class ModuleNode extends Node
                 ->raw(");\n")
             ;
         } else {
-            throw new \LogicException('Trait templates can only be constant nodes.');
+            throw new \LogicException('Trait template can only be constant nodes.');
         }
     }
 }

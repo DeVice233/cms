@@ -2,10 +2,22 @@
 
 namespace App;
 
+
 class View
 {
+    protected $twig;
+    protected $loader;
+    public function __construct(){
+        $this->loader = new \Twig\Loader\FilesystemLoader('template/front');
+        $this->twig= new \Twig\Environment($this->loader, [
+
+        ]);
+
+    }
  public  function showIntroPage(){
-     echo 'home';
+    $title = 'Главная страница';
+    $template = $this->twig->load('index.twig');
+    echo $template->render(['Title'=>$title]);
  }
 
  public  function showSinglePage($data){

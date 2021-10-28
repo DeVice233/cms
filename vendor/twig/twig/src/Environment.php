@@ -32,7 +32,7 @@ use Twig\RuntimeLoader\RuntimeLoaderInterface;
 use Twig\TokenParser\TokenParserInterface;
 
 /**
- * Stores the Twig configuration and renders templates.
+ * Stores the Twig configuration and renders template.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
@@ -72,9 +72,9 @@ class Environment
      *  * debug: When set to true, it automatically set "auto_reload" to true as
      *           well (default to false).
      *
-     *  * charset: The charset used by the templates (default to UTF-8).
+     *  * charset: The charset used by the template (default to UTF-8).
      *
-     *  * cache: An absolute path where to store the compiled templates,
+     *  * cache: An absolute path where to store the compiled template,
      *           a \Twig\Cache\CacheInterface implementation,
      *           or false to disable compilation cache (default).
      *
@@ -82,7 +82,7 @@ class Environment
      *                 If you don't provide the auto_reload option, it will be
      *                 determined automatically based on the debug value.
      *
-     *  * strict_variables: Whether to ignore invalid variables in templates
+     *  * strict_variables: Whether to ignore invalid variables in template
      *                      (default to false).
      *
      *  * autoescape: Whether to enable auto-escaping (default to html):
@@ -209,7 +209,7 @@ class Environment
      * @param bool $original Whether to return the original cache option or the real cache instance
      *
      * @return CacheInterface|string|false A Twig\Cache\CacheInterface implementation,
-     *                                     an absolute path to the compiled templates,
+     *                                     an absolute path to the compiled template,
      *                                     or false to disable cache
      */
     public function getCache($original = true)
@@ -221,7 +221,7 @@ class Environment
      * Sets the current cache implementation.
      *
      * @param CacheInterface|string|false $cache A Twig\Cache\CacheInterface implementation,
-     *                                           an absolute path to the compiled templates,
+     *                                           an absolute path to the compiled template,
      *                                           or false to disable cache
      */
     public function setCache($cache)
@@ -372,7 +372,7 @@ class Environment
     /**
      * Creates a template from source.
      *
-     * This method should not be used as a generic way to load templates.
+     * This method should not be used as a generic way to load template.
      *
      * @param string $template The template source
      * @param string $name     An optional name of the template to be used in error messages
@@ -420,11 +420,11 @@ class Environment
      * Tries to load a template consecutively from an array.
      *
      * Similar to load() but it also accepts instances of \Twig\Template and
-     * \Twig\TemplateWrapper, and an array of templates where each is tried to be loaded.
+     * \Twig\TemplateWrapper, and an array of template where each is tried to be loaded.
      *
-     * @param string|TemplateWrapper|array $names A template or an array of templates to try consecutively
+     * @param string|TemplateWrapper|array $names A template or an array of template to try consecutively
      *
-     * @throws LoaderError When none of the templates can be found
+     * @throws LoaderError When none of the template can be found
      * @throws SyntaxError When an error occurred during compilation
      */
     public function resolveTemplate($names): TemplateWrapper
@@ -440,7 +440,7 @@ class Environment
             }
         }
 
-        throw new LoaderError(sprintf('Unable to find one of the following templates: "%s".', implode('", "', $names)));
+        throw new LoaderError(sprintf('Unable to find one of the following template: "%s".', implode('", "', $names)));
     }
 
     public function setLexer(Lexer $lexer)

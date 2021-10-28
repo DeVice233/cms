@@ -15,6 +15,5 @@
     "require": {
         "noahbuscher/macaw": "dev-master",
         "twig/twig": "^3.0"
-
     }
 }

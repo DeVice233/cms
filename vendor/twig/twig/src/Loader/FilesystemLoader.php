@@ -31,7 +31,7 @@ class FilesystemLoader implements LoaderInterface
     private $rootPath;
 
     /**
-     * @param string|array $paths    A path or an array of paths where to look for templates
+     * @param string|array $paths    A path or an array of paths where to look for template
      * @param string|null  $rootPath The root path common to all relative paths (null for getcwd())
      */
     public function __construct($paths = [], string $rootPath = null)
@@ -47,7 +47,7 @@ class FilesystemLoader implements LoaderInterface
     }
 
     /**
-     * Returns the paths to the templates.
+     * Returns the paths to the template.
      */
     public function getPaths(string $namespace = self::MAIN_NAMESPACE): array
     {
@@ -65,7 +65,7 @@ class FilesystemLoader implements LoaderInterface
     }
 
     /**
-     * @param string|array $paths A path or an array of paths where to look for templates
+     * @param string|array $paths A path or an array of paths where to look for template
      */
     public function setPaths($paths, string $namespace = self::MAIN_NAMESPACE): void
     {

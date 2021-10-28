@@ -1225,10 +1225,10 @@ function twig_test_iterable($value)
  * Renders a template.
  *
  * @param array        $context
- * @param string|array $template      The template to render or an array of templates to try consecutively
+ * @param string|array $template      The template to render or an array of template to try consecutively
  * @param array        $variables     The variables to pass to the template
  * @param bool         $withContext
- * @param bool         $ignoreMissing Whether to ignore missing templates or not
+ * @param bool         $ignoreMissing Whether to ignore missing template or not
  * @param bool         $sandboxed     Whether to sandbox the template or not
  *
  * @return string The rendered template
@@ -1277,7 +1277,7 @@ function twig_include(Environment $env, $context, $template, $variables = [], $w
  * Returns a template content without rendering it.
  *
  * @param string $name          The template name
- * @param bool   $ignoreMissing Whether to ignore missing templates or not
+ * @param bool   $ignoreMissing Whether to ignore missing template or not
  *
  * @return string The template source
  */

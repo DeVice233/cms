@@ -15,7 +15,7 @@ use Twig\Error\LoaderError;
 use Twig\Source;
 
 /**
- * Loads templates from other loaders.
+ * Loads template from other loaders.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

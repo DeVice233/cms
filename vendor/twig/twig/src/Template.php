@@ -17,7 +17,7 @@ use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 
 /**
- * Default base class for compiled templates.
+ * Default base class for compiled template.
  *
  * This class is an implementation detail of how template compilation currently
  * works, which might change. It should never be used directly. Use $twig->load()
@@ -249,7 +249,7 @@ abstract class Template
      * Returns whether a block exists or not in the current context of the template.
      *
      * This method checks blocks defined in the current template
-     * or defined in "used" traits or defined in parent templates.
+     * or defined in "used" traits or defined in parent template.
      *
      * @param string $name    The block name
      * @param array  $context The context
@@ -278,7 +278,7 @@ abstract class Template
      * Returns all block names in the current context of the template.
      *
      * This method checks blocks defined in the current template
-     * or defined in "used" traits or defined in parent templates.
+     * or defined in "used" traits or defined in parent template.
      *
      * @param array $context The context
      * @param array $blocks  The current set of blocks

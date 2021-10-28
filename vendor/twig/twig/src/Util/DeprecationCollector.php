@@ -28,10 +28,10 @@ final class DeprecationCollector
     }
 
     /**
-     * Returns deprecations for templates contained in a directory.
+     * Returns deprecations for template contained in a directory.
      *
-     * @param string $dir A directory where templates are stored
-     * @param string $ext Limit the loaded templates by extension
+     * @param string $dir A directory where template are stored
+     * @param string $ext Limit the loaded template by extension
      *
      * @return array An array of deprecations
      */
@@ -47,9 +47,9 @@ final class DeprecationCollector
     }
 
     /**
-     * Returns deprecations for passed templates.
+     * Returns deprecations for passed template.
      *
-     * @param \Traversable $iterator An iterator of templates (where keys are template names and values the contents of the template)
+     * @param \Traversable $iterator An iterator of template (where keys are template names and values the contents of the template)
      *
      * @return array An array of deprecations
      */
@@ -66,7 +66,7 @@ final class DeprecationCollector
             try {
                 $this->twig->parse($this->twig->tokenize(new Source($contents, $name)));
             } catch (SyntaxError $e) {
-                // ignore templates containing syntax errors
+                // ignore template containing syntax errors
             }
         }
 
