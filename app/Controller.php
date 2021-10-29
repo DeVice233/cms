@@ -27,6 +27,6 @@ class Controller
 
     public function view($id)
     {
-        echo $id;
+        $this->View->showSinglePage($id);
     }
 }

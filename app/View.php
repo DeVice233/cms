@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use Twig;
 
 class View
 {
@@ -21,18 +21,16 @@ class View
  }
 
  public  function showSinglePage($data){
+     $title = 'Статья '.$data;
+        $template = $this->twig->load('singlepage.twig');
+        echo $template->render(['data'=>$data, 'Title'=>$title]);
 
-     print_r($data);
  }
 
  public function showListPages(array $data){
-     echo '<ul>';
-     $i =1;
-     foreach ($data as $page){
-         echo '<li><a href="/view/'.$i.'">'.$page.'</a></li>';
-         $i++;
-     }  echo '</ul>';
-
+     $title = 'Список статей';
+     $template = $this->twig->load('pages.twig');
+     echo $template->render(['data' => $data, 'Title'=>$title]);
  }
 
 }

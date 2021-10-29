@@ -5,15 +5,15 @@ namespace App;
 class Model
 {
     public function getListPages(){
-        $date =array();
-        for ($i = 1; $i <= 5; $i++){
-            $date[].='Page title - '.$i;
+        $data =array();
+        $item = array();
+        for ($i = 1; $i <= 15; $i ++){
+            $item['href'] = "/view/".$i;
+            $item['caption'] = 'Page title - '.$i;
+            $data[] = $data + $item;
         }
-        return $date;
+        return $data;
     }
 
-    public function getSinglePage($id){
-        $date = 'Номер страницы'.$id;
-        return $date;
-    }
+
 }
